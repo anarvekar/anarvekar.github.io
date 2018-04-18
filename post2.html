@@ -13,7 +13,7 @@
     <div class="border">
     <table border="0" cellpadding="10">
             <h1>Using ROS to control the car with our keyboards</h1>
-
+            <h2>April 18, 2018</h2>
             <p>The system we hope to build out is:</p>
             <img src="system_setup.png" height=300 width=700>
             <p>Using our 32 bit linux VM, we will SSH into the Jetson which is the computer on board the vehicle. On the jetson, we will write code which provides instructions to the teensy microcontroller. The microcontroller generates pulse width modulation signals that the receiver on the car uses to move. The duty cyle input to the servo and ESC are what determine how much to throttle and what direction to reverse. We did the calculations to convert duty cycle input to PWM in our code. 
