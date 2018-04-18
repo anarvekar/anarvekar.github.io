@@ -5,6 +5,11 @@
   color: #663399;
   background-color: #87CEEB }
 
+div.border {
+    width:1200px;
+    margin: auto;
+}
+
 ul.navbar {
   list-style-type: none;
   padding: 0;

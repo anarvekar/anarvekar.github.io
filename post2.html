@@ -10,11 +10,25 @@
         <li><a href="post1.html">Blog post 1</a>
         <li><a href="post2.html">Blog post 2</a>
     </ul>
+    <div class="border">
     <table border="0" cellpadding="10">
             <h1>Using ROS to control the car with our keyboards</h1>
-            <h2>Coming soon</h2>
-            
-    </table>
 
+            <p>The system we hope to build out is:</p>
+            <img src="system_setup.png" height=300 width=700>
+            <p>Using our 32 bit linux VM, we will SSH into the Jetson which is the computer on board the vehicle. On the jetson, we will write code which provides instructions to the teensy microcontroller. The microcontroller generates pulse width modulation signals that the receiver on the car uses to move. The duty cyle input to the servo and ESC are what determine how much to throttle and what direction to reverse. We did the calculations to convert duty cycle input to PWM in our code. 
+            </p>
+            <p> We began by pulling the template code from Professor Behl's github and making adjustments to the files so it would compile and run on our Jetson. We wrote two nodes - keyboard.py and talker.py. Keyboard takes note off the keys pressed and publishes to a topic called drive_parameters. Talker subscribes to the topic drive_parameters and maps the duty cycle input to PWM as mentioned above and publishes to drive_pwm to give the car instructions.
+            </p>
+            <p>We ran into some problems, beginning with difficulty connecting to the microcontroller. This was fixed by disconecting the lidar. Then after our code was written and we confirmed the write information was being published, we realized that there is a problem with the teensy firmware itself that prevented the car from receiving its commands. However, after our TA soldered two pins onto our teensy power board, the code worked. We are now able to control our car by moving the four arrow keys on a laptop. Below is a video of us controlling the car with the keyboard:
+            </p>
+            <!-- Insert video clip here: -->
+            <video width="320" height="240" autoplay>
+              <source src="movie.mp4" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+    </table>
+    </div>
 </body>
 </html>
