@@ -1,13 +1,21 @@
-﻿body {
+body {
   padding-left: 11em;
   font-family: Georgia, "Times New Roman",
         Times, serif;
   color: #663399;
   background-color: #87CEEB }
 
+div.container_2 {
+    /*transform: rotate(270deg);*/
+    /*-moz-transform: rotate(-90deg);*/
+    /*-o-transform: rotate(-90deg);*/
+    /*-ms-transform: rotate(-90deg);*/
+    transform: rotate(-90deg);
+}
+
 div.border {
     width:1200px;
-    margin: auto;
+    margin: auto; 
 }
 
 ul.navbar {

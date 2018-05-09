@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Formula 1/10</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="index.html">Home page</a>
+        <li><a href="meettheteam.html">Meet the team</a>
+        <li><a href="#">Blog post 1</a>
+        <li><a href="post2.html">Blog post 2</a>
+        <li><a href="#">Blog post 3</a>
+    </ul>
+    
+    <div class="border">
+    <table border="0" cellpadding="10">
+            <h1>Getting the car to work!</h1>
+            <h2>May 8th, 2018</h2>
+            <p> 
+            We implemented a wall following algorithm which calculates the distance of the wall. If we know the distance of the wall, we can compare it with the desire distance and calculate the trajectory. We wrote two files: dist_finder.py and control.py.
+            </p>
+            <p>
+            Distfinder.py determines how far the car is from the wall. We wrote two methods in here called getRange and callback. These were fairly easy to write because of our past experience with ROS. This node subscribes to the LIDAR and publishes to the topic error.
+            </p>
+            <p>
+            There were originally some struggles getting this to work as you can see below:
+            </p>
+            <video width="600" height="400" autoplay>
+              <source src="autonomous_fail.mp4" type="video/mp4">
+            </video>
+            <p>
+            However, after tuning the various parameters like Kp, Kd, distance from the wall, projection distance, we were able to get our car working pretty well! We also decided to implement PID steering which involves the car changing speed based on where it is on the track. When on the straights, the car will move a lot faster and then slow down while making a turn. We hoped this strategy would shave off some time during the race. Here is our car after this successful implementation!
+            </p>
+            <!-- <div class="container_2"> -->
+	            <video width="600" height="400" autoplay>
+	              <source src="race.mp4" type="video/mp4">
+	            </video>
+            <!-- </div> -->
+    </table>
+
+    </div>
+</body>
+</html>
